@@ -9,6 +9,7 @@ START_DATE = '2023-06-07'
 DAYS = 100
 DAYS_TO_SKIP = 2  # Number of days to skip after each commit
 TEMP_FILE_NAME = 'temp.txt'
+BRANCH_NAME = 'main'
 
 def run_command(command, env=None):
     """Run a shell command and return the output."""
@@ -25,7 +26,10 @@ def change_date_and_commit(date, counter):
         temp_file.write(f'Commit number {counter}\n')
     
     run_command('git add .')
-    run_command(f'git commit -m "{COMMIT_MESSAGE} {counter}"', env=env)
+    git_status = run_command('git status')
+    print(git_status)  # Print git status for debugging
+    commit_output = run_command(f'git commit -m "{COMMIT_MESSAGE} {counter}"', env=env)
+    print(commit_output)  # Print commit output for debugging
 
 def main():
     # Ensure we're in the correct directory
@@ -42,7 +46,8 @@ def main():
         commit_counter += 1
     
     # Push the changes
-    run_command('git push origin main')
+    push_output = run_command(f'git push origin {BRANCH_NAME}')
+    print(push_output)  # Print push output for debugging
 
 if __name__ == "__main__":
     main()
