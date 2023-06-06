@@ -8,7 +8,7 @@ COMMIT_MESSAGE = 'Hack the contribution graph'
 START_DATE = '2023-06-07'
 DAYS = 20
 DAYS_TO_SKIP = 2  # Number of days to skip after each commit
-TEMP_FILE_NAME = 'temp.py'
+TEMP_FILE_NAME = 'temp.txt'
 
 def run_command(command, env=None):
     """Run a shell command and return the output."""
