@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 REPO_PATH = r'C:\Users\alexm\Desktop\Projects\python'  # Using raw string for Windows path
 COMMIT_MESSAGE = 'Hack the contribution graph'
 START_DATE = '2023-06-07'
-DAYS = 20
+DAYS = 100
 DAYS_TO_SKIP = 2  # Number of days to skip after each commit
 TEMP_FILE_NAME = 'temp.txt'
 
