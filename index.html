@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Assignment</title>
+    <style>
+        /* Same CSS as previous form */
+    </style>
+</head>
+<body>
+    <h2>Grade Assignment Form</h2>
+    <form action="submit_grade.php" method="POST">
+        <label for="student">Select Student:</label>
+        <select id="student" name="student" required>
+            <option value="">-- Select Student --</option>
+            <option value="1">Student 1</option>
+            <option value="2">Student 2</option>
+            <!-- Add dynamically populated options from database -->
+        </select>
+        
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select Course --</option>
+            <option value="1">Course 1</option>
+            <option value="2">Course 2</option>
+            <!-- Add dynamically populated options from database -->
+        </select>
+        
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade" required>
+        
+        <input type="submit" value="Assign Grade">
+    </form>
+</body>
+</html>
