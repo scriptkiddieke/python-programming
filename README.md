@@ -1,3 +1,3 @@
-Hi geeks! Welcome to Introduction to python programming.
+Hi there! Welcome to Introduction to python programming.
 
 Happy coding!!
